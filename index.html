@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Millo's - Compostaje con Microorganismos</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #e6ffe6;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.oscuro {
+      background-color: #1e1e1e;
+      color: #f0f0f0;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      transition: background-color 0.3s;
+    }
+
+    body.oscuro header {
+      background-color: #333;
+    }
+
+    button {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      margin-top: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: box-shadow 0.3s;
+    }
+
+    body.oscuro img {
+      box-shadow: 0 4px 8px rgba(255,255,255,0.2);
+    }
+
+    footer {
+      background-color: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      transition: background-color 0.3s;
+    }
+
+    body.oscuro footer {
+      background-color: #111;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Millo's</h1>
+    <p>Transforma tus residuos en vida</p>
+    <button id="modo-toggle">🌙 Modo Oscuro</button>
+  </header>
+
+  <main>
+    <section>
+      <h2>Integrantes</h2>
+      <ul>
+        <li>4IV9</li>
+        <li>Gomez Calixto Emilio Eduardo</li>
+        <li>Mendoza Vargas Yadira</li>
+        <li>Ochoa Velazquez Natalia</li>
+        <li>Velasco Cardoza Joselyne</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>¿Qué es Millo's?</h2>
+      <p>Millo's es una iniciativa enfocada en promover el uso responsable de los residuos orgánicos mediante la elaboración de composta y el uso de microorganismos eficientes. Nuestro objetivo es reducir la contaminación y enriquecer los suelos de forma natural.</p>
+    </section>
+
+    <section>
+      <h2>¿Qué es la composta?</h2>
+      <p>La composta es el producto de la descomposición de residuos orgánicos como cáscaras, frutas, hojas y restos vegetales. Es un abono natural rico en nutrientes que mejora la salud del suelo.</p>
+      <img src="img/composta.jpg" alt="Composta orgánica">
+    </section>
+
+    <section>
+      <h2>Proceso del compostaje</h2>
+      <p>El proceso implica recolectar residuos orgánicos, mezclarlos, airearlos y esperar a que los microorganismos los transformen en abono.</p>
+      <img src="img/proceso.jpg" alt="Proceso de compostaje">
+    </section>
+
+    <section>
+      <h2>Microorganismos útiles</h2>
+      <p>Microorganismos como bacterias y hongos descomponen los residuos. Son esenciales para convertir la materia orgánica en nutrientes para el suelo.</p>
+      <img src="img/micro.jpg" alt="Microorganismos descomponedores">
+    </section>
+
+    <section>
+      <h2>Beneficios del compostaje</h2>
+      <ul>
+        <li>Disminuye la cantidad de basura orgánica</li>
+        <li>Reduce gases de efecto invernadero</li>
+        <li>Mejora la estructura del suelo</li>
+        <li>Aporta nutrientes naturales a las plantas</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Millo's - Todos los derechos reservados</p>
+  </footer>
+
+  <script>
+    const botonModo = document.getElementById('modo-toggle');
+
+    botonModo.addEventListener('click', () => {
+      document.body.classList.toggle('oscuro');
+
+      if(document.body.classList.contains('oscuro')) {
+        botonModo.textContent = '☀️ Modo Claro';
+      } else {
+        botonModo.textContent = '🌙 Modo Oscuro';
+      }
+    });
+  </script>
+</body>
+</html>
+
